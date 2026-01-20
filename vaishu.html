@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Vaishu 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #ffd1dc, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    font-family: 'Comic Sans MS', cursive;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25),
+        0 0 40px rgba(255,77,109,0.35);
+    animation: heartbeat 2.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+/* IMAGE */
+.main-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff4d6d;
+    box-shadow: 0 0 40px rgba(255,77,109,0.6);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px #ff4d6d; }
+    to { box-shadow: 0 0 45px #ff1e50; }
+}
+
+h1 { color:#ff4d6d; margin: 15px 0; }
+p { font-size: 16px; color: #333; }
+
+/* SECTIONS */
+.section {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* LETTER */
+.letter {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    text-align: left;
+}
+
+/* VIDEO */
+video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* FLOATING HEARTS */
+.float {
+    position: absolute;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    100% { transform: translateY(-120vh) translateX(30px); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <!-- MAIN CARD -->
+    <div class="card">
+        <img src="vaishu.jpg" class="main-img">
+        <h1 id="typeText"></h1>
+        <p>
+            I love you always 😘😘😘💖<br>
+            Happy 18th birthdayyy Bujiiipapaaaa 🎂🎉
+        </p>
+        <button onclick="surprise()">Click for Surprise 😄</button>
+    </div>
+
+    <!-- PHOTO GALLERY -->
+    <div class="section">
+        <h3>📸 Our Memories</h3>
+        <div class="gallery">
+            <img src="photo1.jpg">
+            <img src="photo2.jpg">
+            <img src="photo3.jpg">
+            <img src="photo4.jpg">
+            <img src="photo5.jpg">
+            <img src="photo6.jpg">
+            <img src="photo7.jpg">
+        </div>
+    </div>
+
+    <!-- LETTER -->
+    <div class="section">
+        <h3>💌 A Letter For You</h3>
+        <div class="letter">
+            Dear Vaishu,<br><br>
+            Mi Priyamayna Husband Rayanadi Miru achta kushlamena
+            nenu ichata kushalame ..
+            Miku puttina roju Subakanshaluu 😘😘😘 
+            I Lovee Uh Madamm😘😘😘😘
+            and Thanks for being my Partnerrrr<br><br>
+            
+            Nenu niku antha importance ichanoo ledoo teliduu butt chepthuna
+            one Thingg I Lovee Uhh ,I wont Leave uh anycostt 
+            Rember I promiseee Uh at any situation i will be hereee
+            nen ninnu chala jagrtha gaa  chuskuntaaa
+            nuvv nathoo ne undipooo nenu kuda carrer midhaa focus chesthaa
+            nenu ma ammayiniii chalaa baga chuskuntaa koncham adipistha
+            kanii chalaa baga chuskuntaaa
+            sorryy nen ninnu na kopam tho chalaa hurt chessaaa but promisee chala jagrthagaa
+            chuskuntaaa no doubtt sare naa I LOVE UHHH Bujiiipapaaaa😘😘😘😘😘
+
+            <br><br>
+
+            On this Day U are turning 18 soo 
+            ippatii nunchi the real journeyy startt already chala chusiii 
+            nerchukunavv ippudu practical ga unduuu  jagrtha ga unduu andd 
+            last and final thinggg appudu navuthuuu unduuu nuv navuthe nakuu chalaa 
+            ante chalaaaa istamm gurthu petukooooo Love uhh
+             ammayi garuuuuuuuuuuu😘😘😘😘✨<br><br>
+
+            — Always yours Abbayiiii  🤍
+        </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="section">
+        <h3>🎥 A Small Video For You</h3>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
+
+</div>
+
+<script>
+/* Typing effect */
+let text = "🎂 Happy Birthday Vaishuuu papaa🎂";
+let i = 0;
+(function type() {
+    if (i < text.length) {
+        typeText.innerHTML += text.charAt(i++);
+        setTimeout(type, 90);
+    }
+})();
+
+/* Surprise button */
+function surprise() {
+    alert("💖 Surprise 💖\n I LOVEE YOUUU 🤍😘😘😘😘😄");
+}
+
+/* FLOATING HEARTS FROM BOTTOM + TOP */
+const hearts = ["❤️", "💖", "💕", "💗"];
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "float";
+
+    // Random heart emoji
+    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+    // Random size
+    const size = Math.random() * 20 + 18; // 18px to 38px
+    heart.style.fontSize = size + "px";
+
+    // Random horizontal position
+    heart.style.left = Math.random() * 100 + "vw";
+
+    // Random vertical start (bottom OR top)
+    heart.style.bottom = Math.random() > 0.5 ? "-30px" : "100vh";
+
+    // Random speed
+    const duration = Math.random() * 3 + 4; // 4s – 7s
+    heart.style.animationDuration = duration + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+
+}, 250);
+</script>
+
+</body>
+</html>
